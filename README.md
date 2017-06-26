@@ -20,13 +20,13 @@ This package is for Backpack for Laravel shows Google Analytics in your admin pa
 
 
 
-Via Composer
+5. Via Composer
 
 ``` bash
 $ composer require shinokada/GoogleAnalytics
 ```
 
-Next up the service provider must be registered:
+6. Next up the service provider must be registered:
 
 ```php
 'providers' => [
@@ -45,26 +45,26 @@ Next up the service provider must be registered:
 
 ```
 
-Follow the instruction at [spatie/laravel-analytics](https://github.com/spatie/laravel-analytics) and add download a json file and save is as service-account-credentilas.json under `storage/app/googleanalytics/` folder.
+7. Follow the instruction at [spatie/laravel-analytics](https://github.com/spatie/laravel-analytics) and add download a json file and save is as service-account-credentilas.json under `storage/app/googleanalytics/` folder.
 
-Add `ANALYTICS_VIEW_ID` to `.env` file.
+8. Add `ANALYTICS_VIEW_ID` to `.env` file.
 
-Add a menu item for it in resources/views/vendor/backpack/base/inc/sidebar.blade.php or menu.blade.php:
+9. Add a menu item for it in resources/views/vendor/backpack/base/inc/sidebar.blade.php or menu.blade.php:
 
 ```php
 <li class="treeview">
-    <a href="#"><i class="fa fa-line-chart"></i> <span>{{ trans('googleanalytics::googleanalytices.analytics') }}</span> <i class="fa fa-angle-left pull-right"></i></a>
+    <a href="#"><i class="fa fa-line-chart"></i> <span>{{ trans('googleanalytics::googleanalytics.analytics') }}</span> <i class="fa fa-angle-left pull-right"></i></a>
     <ul class="treeview-menu">
-        <li><a href="{{ url('admin/analytics') }}"><i class="fa fa-pie-chart"></i> <span>{{ trans('googleanalytics::googleanalytices.analyticsbasic') }}</span></a></li>
-        <li><a href="{{ url('admin/analytics-mobile') }}"><i class="fa fa-table"></i> <span>{{ trans('googleanalytics::googleanalytices.mobile-traffic') }}</span></a></li>
-        <li><a href="{{ url('admin/analytics-returning') }}"><i class="fa fa-table"></i> <span>{{ trans('googleanalytics::googleanalytices.returningsessions') }}</span></a></li>
-        <li><a href="{{ url('admin/analytics-operating') }}"><i class="fa fa-table"></i> <span>{{ trans('googleanalytics::googleanalytices.operatingsystem') }}</span></a></li>
-        <li><a href="{{ url('admin/analytics-traffic') }}"><i class="fa fa-table"></i> <span>{{ trans('googleanalytics::googleanalytices.trafficsources') }}</span></a></li>
-        <li><a href="{{ url('admin/analytics-time-on-site') }}"><i class="fa fa-table"></i> <span>{{ trans('googleanalytics::googleanalytices.timeonsite') }}</span></a></li>
-        <li><a href="{{ url('admin/analytics-referring-sites') }}"><i class="fa fa-table"></i> <span>{{ trans('googleanalytics::googleanalytices.referringsites') }}</span></a></li>
-        <li><a href="{{ url('admin/analytics-search-engines') }}"><i class="fa fa-table"></i> <span>{{ trans('googleanalytics::googleanalytices.searchengines') }}</span></a></li>
-        <li><a href="{{ url('admin/analytics-keywords') }}"><i class="fa fa-table"></i> <span>{{ trans('googleanalytics::googleanalytices.keywords') }}</span></a></li>
-        <li><a href="{{ url('admin/analytics-topcontent') }}"><i class="fa fa-table"></i> <span>{{ trans('googleanalytics::googleanalytices.topcontent') }}</span></a></li>
+        <li><a href="{{ url('admin/analytics') }}"><i class="fa fa-pie-chart"></i> <span>{{ trans('googleanalytics::googleanalytics.analyticsbasic') }}</span></a></li>
+        <li><a href="{{ url('admin/analytics-mobile') }}"><i class="fa fa-table"></i> <span>{{ trans('googleanalytics::googleanalytics.mobile-traffic') }}</span></a></li>
+        <li><a href="{{ url('admin/analytics-returning') }}"><i class="fa fa-table"></i> <span>{{ trans('googleanalytics::googleanalytics.returningsessions') }}</span></a></li>
+        <li><a href="{{ url('admin/analytics-operating') }}"><i class="fa fa-table"></i> <span>{{ trans('googleanalytics::googleanalytics.operatingsystem') }}</span></a></li>
+        <li><a href="{{ url('admin/analytics-traffic') }}"><i class="fa fa-table"></i> <span>{{ trans('googleanalytics::googleanalytics.trafficsources') }}</span></a></li>
+        <li><a href="{{ url('admin/analytics-time-on-site') }}"><i class="fa fa-table"></i> <span>{{ trans('googleanalytics::googleanalytics.timeonsite') }}</span></a></li>
+        <li><a href="{{ url('admin/analytics-referring-sites') }}"><i class="fa fa-table"></i> <span>{{ trans('googleanalytics::googleanalytics.referringsites') }}</span></a></li>
+        <li><a href="{{ url('admin/analytics-search-engines') }}"><i class="fa fa-table"></i> <span>{{ trans('googleanalytics::googleanalytics.searchengines') }}</span></a></li>
+        <li><a href="{{ url('admin/analytics-keywords') }}"><i class="fa fa-table"></i> <span>{{ trans('googleanalytics::googleanalytics.keywords') }}</span></a></li>
+        <li><a href="{{ url('admin/analytics-topcontent') }}"><i class="fa fa-table"></i> <span>{{ trans('googleanalytics::googleanalytics.topcontent') }}</span></a></li>
         <li><a href="{{ url('admin/analytics-top-landing-pages') }}"><i class="fa fa-table"></i> <span>{{ trans('googleanalytics::googleanalyt.toplandingpages') }}</span></a></li>
         <li><a href="{{ url('admin/analytics-top-exit-pages') }}"><i class="fa fa-table"></i> <span>{{ trans('googleanalytics::googleanalyt.topexitpages') }}</span></a></li>
     </ul>
