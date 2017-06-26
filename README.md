@@ -1,12 +1,11 @@
 # GoogleAnalytics
 
-[![Latest Version on Packagist][ico-version]][https://packagist.org/packages/shinokada/googleanalytics]
+[![Latest Version on Packagist][ico-version]](https://packagist.org/packages/shinokada/googleanalytics)
 [![Software License][ico-license]](LICENSE.md)
 [![Build Status][ico-travis]][link-travis]
 [![Coverage Status][ico-scrutinizer]][link-scrutinizer]
 [![Quality Score][ico-code-quality]][link-code-quality]
-[![Total Downloads][ico-downloads]][https://github.com/shinokada/GoogleAnalytics]
-
+[![Total Downloads][ico-downloads]](https://github.com/shinokada/GoogleAnalytics)
 
 This package is for Backpack for Laravel shows Google Analytics in your admin page.
 
