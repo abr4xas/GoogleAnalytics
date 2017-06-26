@@ -1,7 +1,7 @@
 {
     "name": "shinokada/googleanalytics",
     "type": "library",
-    "description": ":package_description",
+    "description": "Google Analytics for Backpack for Laravel",
     "keywords": [
         "shinokada",
         "GoogleAnalytics"
