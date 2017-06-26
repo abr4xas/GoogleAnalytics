@@ -34,9 +34,20 @@ Next up the service provider must be registered:
     Spatie\Analytics\AnalyticsServiceProvider::class,
     Shinokada\GoogleAnalytics\GoogleAnalyticsServiceProvider::class,
 ];
+
+...
+
+'aliases' => [
+    ...
+    'Analytics' => Spatie\Analytics\AnalyticsFacade::class,
+    ...
+];
+
 ```
 
 Follow the instruction at [spatie/laravel-analytics](https://github.com/spatie/laravel-analytics) and add download a json file and save is as service-account-credentilas.json under `storage/app/googleanalytics/` folder.
+
+Add `ANALYTICS_VIEW_ID` to `.env` file.
 
 Add a menu item for it in resources/views/vendor/backpack/base/inc/sidebar.blade.php or menu.blade.php:
 
