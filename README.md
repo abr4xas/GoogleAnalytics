@@ -1,17 +1,25 @@
 # GoogleAnalytics
 
-[![Latest Version on Packagist][ico-version]][link-packagist]
+[![Latest Version on Packagist][ico-version]][https://packagist.org/packages/shinokada/googleanalytics]
 [![Software License][ico-license]](LICENSE.md)
 [![Build Status][ico-travis]][link-travis]
 [![Coverage Status][ico-scrutinizer]][link-scrutinizer]
 [![Quality Score][ico-code-quality]][link-code-quality]
-[![Total Downloads][ico-downloads]][link-downloads]
+[![Total Downloads][ico-downloads]][https://github.com/shinokada/GoogleAnalytics]
 
 
 This package is for Backpack for Laravel shows Google Analytics in your admin page.
 
 
 ## Installation
+
+1. Install [Laravel](https://laravel.com/docs/5.4/installation)
+2. Install [Backpack for Laravel Base](https://github.com/Laravel-Backpack/Base) and [Backpack for CRUD](https://github.com/Laravel-Backpack/CRUD). You can follow this [instruction](https://laravel-backpack.readme.io/docs/install-on-laravel-54). You need to purchase a license for a non-commercial license for  Backpack for Laravel. Please read [this](https://backpackforlaravel.com/#pricing) for more details. 
+
+3. Use `valet park` so that you can see your website at `yourweb.dev`.
+4. Modify `.env` for Database config. And login from `yourweb.dev/admin/login`.
+
+
 
 Via Composer
 
@@ -53,12 +61,6 @@ Add a menu item for it in resources/views/vendor/backpack/base/inc/sidebar.blade
 </li>
 ```
 
-## Usage
-
-``` php
-$skeleton = new shinokada\GoogleAnalytics();
-echo $skeleton->echoPhrase('Hello, League!');
-```
 
 ## Change log
 
