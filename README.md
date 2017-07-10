@@ -45,7 +45,7 @@ $ composer require shinokada/GoogleAnalytics
 
 ```
 
-7. Follow the instruction at [spatie/laravel-analytics](https://github.com/spatie/laravel-analytics) and add download a json file and save is as service-account-credentilas.json under `storage/app/googleanalytics/` folder.
+7. Follow the instruction at [spatie/laravel-analytics](https://github.com/spatie/laravel-analytics) and add download a json file and save as a service-account-credentilas.json under `storage/app/googleanalytics/` folder.
 
 8. Add `ANALYTICS_VIEW_ID` to `.env` file.
 
