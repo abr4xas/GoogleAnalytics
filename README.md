@@ -12,10 +12,19 @@
 
 ### Installation
 
-Via Composer
+add this to your composer.json
 
-``` bash
-$ composer require abr4xas/GoogleAnalytics
+```json
+"require": {
+    "abr4xas/GoogleAnalytics": "dev-master"
+}
+```
+
+and
+
+```bash
+$ composer update
+$ composer dump-autoload -o // optional
 ```
 
 Next up the service provider must be registered:
@@ -40,7 +49,7 @@ Next up the service provider must be registered:
 Follow the instruction at [spatie/laravel-analytics](https://github.com/spatie/laravel-analytics) and add download a json file and save as a service-account-credentials.json under `storage/app/googleanalytics/` folder.
 
 Add `ANALYTICS_VIEW_ID` to `.env` file.
-
+Add Chart.js to header.
 
 ### Menu
 
