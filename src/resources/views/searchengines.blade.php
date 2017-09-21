@@ -1,24 +1,5 @@
-@extends('backpack::layout')
-
-@section('header')
-    <section class="content-header">
-      <h1>
-        {{ trans('googleanalytics::googleanalytics.searchengines') }}
-      </h1>
-      <ol class="breadcrumb">
-        <li><a href="{{ url(config('backpack.base.route_prefix', 'admin')) }}">{{ config('backpack.base.project_name') }}</a></li>
-        <li class="active">{{ trans('googleanalytics::googleanalytics.searchengines') }}</li>
-      </ol>
-    </section>
-@endsection
-
-@section('after_styles')
-@endsection
-
-
+@extends('layouts.app')
 @section('content')
-
-
 <div class="box">
     <div class="box-header with-border">
         <h3 class="box-title">{{ $description }}</h3>
@@ -46,14 +27,3 @@
 </div>
 <!-- /.box -->
 @endsection
-
-@section('after_scripts')
-@endsection
-
-
-
-
-
-
-
-

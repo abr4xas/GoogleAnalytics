@@ -1,8 +1,4 @@
-@extends('backpack::layout')
-
-@section('after_styles')
-<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.1.1/Chart.min.js"></script>
-@endsection
+@extends('layouts.app')
 
 @section('content')
 <div class="row">
