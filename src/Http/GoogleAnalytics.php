@@ -1,9 +1,10 @@
 <?php 
-namespace Shinokada\GoogleAnalytics\Http;
+
+namespace Abr4xas\GoogleAnalytics\Http;
 
 use Analytics;
-use Spatie\Analytics\Period;
 use Carbon\Carbon;
+use Spatie\Analytics\Period;
 /*
  * https://developers.google.com/analytics/devguides/reporting/core/v3/common-queries
  */
@@ -138,9 +139,4 @@ class GoogleAnalytics{
         $analyticsData = Analytics::performQuery($period,'ga:entrances,ga:bounces',['dimensions'=>'ga:landingPagePath','sort'=>'-ga:entrances']);
         return $analyticsData['rows'];
     }
-
-
-
-
 }
-

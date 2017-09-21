@@ -2,9 +2,6 @@
 
 Route::group(['prefix' => 'admin', 'middleware' => ['web','admin']], function()
 {
-    //Route::get('memberpage', 'MemberController@index');
-    /* Route::get('dashboard', 'DashboardController@index'); */
-    /* Route::get('defaultwidgets', 'DashboardController@defaultwidgets'); */
     Route::get('analytics', 'AnalyticsController@index');
     Route::get('analytics-mobile', 'AnalyticsController@mobile');
     Route::get('analytics-returning', 'AnalyticsController@newreturningsessions');

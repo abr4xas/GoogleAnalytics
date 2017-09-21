@@ -1,39 +1,43 @@
 {
-    "name": "shinokada/googleanalytics",
+    "name": "abr4xas/googleanalytics",
     "type": "library",
-    "description": "Google Analytics for Backpack for Laravel",
+    "description": "Google Analytics for Laravel",
     "keywords": [
-        "shinokada",
+        "abr4xas",
         "GoogleAnalytics"
     ],
-    "homepage": "https://github.com/shinokada/googleanalytics",
+    "homepage": "https://github.com/abr4xas/googleanalytics",
     "license": "MIT",
-    "authors": [
-        {
+    "authors": [{
             "name": "Shinichi Okada",
             "email": "okada.shin@gmail.com",
             "homepage": "https://github.com/shinokada",
+            "role": "Developer"
+        },
+        {
+            "name": "Angel Cruz",
+            "email": "me@abr4xas.org",
+            "homepage": "https://github.com/abr4xas",
             "role": "Developer"
         }
     ],
     "require": {
         "illuminate/support": "~5.4",
-        "backpack/crud": "^3.2.0",
-        "php" : "~5.6|~7.0",
+        "php": "~5.6|~7.0",
         "spatie/laravel-analytics": "~3.0"
     },
     "require-dev": {
-        "phpunit/phpunit" : "~4.0||~5.0||~6.0",
+        "phpunit/phpunit": "~4.0||~5.0||~6.0",
         "squizlabs/php_codesniffer": "^2.3"
     },
     "autoload": {
         "psr-4": {
-            "Shinokada\\GoogleAnalytics\\": "src"
+            "Abr4xas\\GoogleAnalytics\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Shinokada\\GoogleAnalytics\\": "tests"
+            "Abr4xas\\GoogleAnalytics\\": "tests"
         }
     },
     "scripts": {
@@ -44,7 +48,13 @@
     "extra": {
         "branch-alias": {
             "dev-master": "1.0-dev"
+        },
+        "laravel": {
+            "providers": [
+                "Abr4xas\\GoogleAnalytics\\GoogleAnalyticsServiceProvider::class,"
+            ]
         }
+
     },
     "config": {
         "sort-packages": true

@@ -1,15 +1,16 @@
 <?php
-namespace Shinokada\GoogleAnalytics\Http\Controllers;
 
-use Illuminate\Http\Request;
-use App\Http\Controllers\Controller;
+namespace Abr4xas\GoogleAnalytics\Http\Controllers;
+
+use Auth;
 use Config;
 use Analytics;
-use Spatie\Analytics\Period;
 use Carbon\Carbon;
-use Shinokada\GoogleAnalytics\Http\GoogleAnalytics;
+use Illuminate\Http\Request;
+use Spatie\Analytics\Period;
+use App\Http\Controllers\Controller;
 use Illuminate\Pagination\LengthAwarePaginator;
-use Auth;
+use Abr4xas\GoogleAnalytics\Http\GoogleAnalytics;
 
 class AnalyticsController extends Controller
 {
@@ -22,7 +23,6 @@ class AnalyticsController extends Controller
         $currentPageSearchResults = $col->slice(($currentPage - 1) * $perPage, $perPage)->all();
         return new LengthAwarePaginator($currentPageSearchResults, count($col), $perPage);
     }
-    
     
     public function index()
     {
@@ -46,7 +46,6 @@ class AnalyticsController extends Controller
         return view('googleanalytics::analytics', $this->data);
     }
 
-
     public function mobile()
     {
         $this->data['title'] = trans('googleanalytics::googleanalytics.mobile-traffic');
@@ -55,7 +54,6 @@ class AnalyticsController extends Controller
         $this->data['entries'] = $this->_pagination($analytics);
         return view('googleanalytics::mobile', $this->data);
     }
-
 
     public function newreturningsessions()
     {
@@ -67,7 +65,6 @@ class AnalyticsController extends Controller
         return view('googleanalytics::returning', $this->data);
     }
 
-
     public function operatingsystem()
     {
         $this->data['title'] = trans('googleanalytics::googleanalytics.operatingsystem'); 
@@ -78,7 +75,6 @@ class AnalyticsController extends Controller
         return view('googleanalytics::operatingsystem', $this->data);
     }
 
-
     public function traffic()
     {
         $this->data['title'] = trans('googleanalytics::googleanalytics.trafficsources');
@@ -87,7 +83,6 @@ class AnalyticsController extends Controller
     //    dd($this->data['analytics']);
         return view('googleanalytics::traffic', $this->data);
     }
-
 
     public function timeonsite()
     {
@@ -98,7 +93,6 @@ class AnalyticsController extends Controller
         return view('googleanalytics::timeonsite', $this->data);
     }
 
-
     public function referringsites()
     {
         $this->data['title'] = trans('googleanalytics::googleanalytics.referringsites');
@@ -108,7 +102,6 @@ class AnalyticsController extends Controller
         return view('googleanalytics::referringsites', $this->data);
     }
 
-
     public function searchengines()
     {
         $this->data['title'] = trans('googleanalytics::googleanalytics.searchengines');
@@ -117,7 +110,6 @@ class AnalyticsController extends Controller
         //dd($this->data['analytics']);
         return view('googleanalytics::searchengines', $this->data);
     }
-
 
     public function keywords()
     {
@@ -134,7 +126,6 @@ class AnalyticsController extends Controller
         return view('googleanalytics::keywords', $this->data);
     }
 
-
     public function topcontent()
     {
         $this->data['title'] = trans('googleanalytics::googleanalytics.topcontent');
@@ -144,7 +135,6 @@ class AnalyticsController extends Controller
         // dd($this->data['analytics']);
         return view('googleanalytics::topcontent', $this->data);
     }
-
 
     public function toplandingpages()
     {
@@ -156,7 +146,6 @@ class AnalyticsController extends Controller
         return view('googleanalytics::toplandingpages', $this->data);
     }
 
-
     public function topexitpages()
     {
         $this->data['title'] = trans('googleanalytics::googleanalytics.topexitpages');
@@ -166,7 +155,4 @@ class AnalyticsController extends Controller
         $this->data['entries'] = $this->_pagination($analytics);
         return view('googleanalytics::topexitpages', $this->data);
     }
-
-
-
 }
