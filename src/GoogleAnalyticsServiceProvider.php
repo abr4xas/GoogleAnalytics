@@ -22,28 +22,21 @@ class GoogleAnalyticsServiceProvider extends ServiceProvider
      */
     public function boot()
     {
+        $this->publishes([
+            // lang
+            __DIR__.'/resources/lang'       => resource_path('lang/vendor/googleanalytics'),
+            // views
+            __DIR__ . '/resources/views'    => resource_path('views/vendor/googleanalytics'),
+
+            // controller
+            __DIR__ . '/Http/Controllers'    => app_path('Http/Controllers'),
+        ], 'googleanalytics');  
+
         // use this if your package has views
         $this->loadViewsFrom(realpath(__DIR__.'/resources/views'), 'googleanalytics');
         
         // use this if your package has lang files
         $this->loadTranslationsFrom(__DIR__.'/resources/lang', 'googleanalytics');
-        
-        // use this if your package has routes
-        $this->setupRoutes($this->app->router);
-    }
-
-    /**
-     * Define the routes for the application.
-     *
-     * @param  \Illuminate\Routing\Router  $router
-     * @return void
-     */
-    public function setupRoutes(Router $router)
-    {
-        $router->group(['namespace' => 'Abr4xas\GoogleAnalytics\Http\Controllers'], function($router)
-        {
-            require __DIR__.'/Http/routes.php';
-        });
     }
 
     /**

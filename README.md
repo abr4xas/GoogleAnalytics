@@ -45,6 +45,24 @@ Next up the service provider must be registered:
 ];
 
 ```
+Next up routes:
+
+```php
+//Google Analytics
+
+Route::get('analytics', 'AnalyticsController@index');
+Route::get('analytics-mobile', 'AnalyticsController@mobile');
+Route::get('analytics-returning', 'AnalyticsController@newreturningsessions');
+Route::get('analytics-operating', 'AnalyticsController@operatingsystem');
+Route::get('analytics-traffic', 'AnalyticsController@traffic');
+Route::get('analytics-time-on-site', 'AnalyticsController@timeonsite');
+Route::get('analytics-referring-sites', 'AnalyticsController@referringsites');
+Route::get('analytics-search-engines', 'AnalyticsController@searchengines');
+Route::get('analytics-keywords', 'AnalyticsController@keywords');
+Route::get('analytics-topcontent', 'AnalyticsController@topcontent');
+Route::get('analytics-top-landing-pages', 'AnalyticsController@toplandingpages');
+Route::get('analytics-top-exit-pages', 'AnalyticsController@topexitpages');
+```
 
 Follow the instruction at [spatie/laravel-analytics](https://github.com/spatie/laravel-analytics) and add download a json file and save as a service-account-credentials.json under `storage/app/googleanalytics/` folder.
 

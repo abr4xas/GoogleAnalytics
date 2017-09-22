@@ -1,6 +1,6 @@
 <?php
 
-namespace Abr4xas\GoogleAnalytics\Http\Controllers;
+namespace App\Http\Controllers;
 
 use Auth;
 use Config;
