@@ -51,7 +51,7 @@
         },
         "laravel": {
             "providers": [
-                "Abr4xas\\GoogleAnalytics\\GoogleAnalyticsServiceProvider::class,"
+                "Abr4xas\\GoogleAnalytics\\GoogleAnalyticsServiceProvider,"
             ]
         }
 

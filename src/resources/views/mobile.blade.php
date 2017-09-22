@@ -16,15 +16,15 @@
                 <th>Pageviews</th>
                 <th>Session Duration</th>
             </tr>
-                @foreach($entries as $item)
+            @foreach($entries as $item)
             <tr>
-                    <td>{{ $item[0] }}</td>
-                    <td>{{ $item[1] }}</td>
-                    <td>{{ $item[2] }}</td>
-                    <td>{{ $item[3] }}</td>
-                    <td>{{ $item[4] }}</td>
-                </tr>
-                    @endforeach
+                <td>{{ $item[0] }}</td>
+                <td>{{ $item[1] }}</td>
+                <td>{{ $item[2] }}</td>
+                <td>{{ $item[3] }}</td>
+                <td>{{ $item[4] }}</td>
+            </tr>
+            @endforeach
          {{ $entries->withPath('analytics-mobile') }}
         </table>
     </div>
