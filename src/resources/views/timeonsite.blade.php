@@ -1,5 +1,7 @@
 @extends('layouts.app')
 @section('content')
+<section class="p-t-lg p-y-md">
+<div class="container">
 <div class="box">
     <div class="box-header with-border">
         <h3 class="box-title">{{ $description }}</h3>
@@ -24,4 +26,6 @@
     <!-- /.box-body -->
 </div>
 <!-- /.box -->
+</div>
+</section>
 @endsection

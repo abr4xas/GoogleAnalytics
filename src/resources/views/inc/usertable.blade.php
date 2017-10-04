@@ -11,10 +11,11 @@
                 <th>No. of Pageviews</th>
             </tr>
                 @foreach ($gausers as $key => $item)
+
                 <tr>
                     <td>Last {{ $key }} days</td>
-                    <td>{{ $item[0]['users']   }}</td>
-                    <td>{{ $item[0]['pageviews']  }}</td>
+                    <td>{{ !empty($item[0]['users']) ? $item[0]['users'] : 0  }}</td>
+                    <td>{{ !empty($item[0]['pageviews']) ? $item[0]['pageviews'] : 0 }}</td>
                 </tr>
                 @endforeach
         </table>

@@ -1,32 +1,28 @@
 @extends('layouts.app')
-
 @section('content')
-<div class="box">
-    <div class="box-header with-border">
-        <h3 class="box-title">{{ $description }}</h3>
+<section class="p-t-lg p-y-md">
+    <div class="container">
+        <div class="box">
+            <div class="box-header with-border">
+                <h3 class="box-title">{{ $description }}</h3>
+            </div>
+            <div class="box-body">
+                <table class="table table-bordered">
+                    <tr>
+                        <th>Days</th>
+                        <th>User Type</th>
+                        <th>Sessions</th>
+                    </tr>
+                @foreach($analytics as $key => $item)
+                    <tr>
+                        <td >{{ $key  }}</td>
+                        <td>New Visitor</td>
+                        <td>{{ !empty($item[0]['visitors']) ? $item[0]['visitors'] : 0 }}</td>
+                    </tr>
+                @endforeach
+                </table> 
+            </div><!-- /.box-body -->
+        </div><!-- /.box -->
     </div>
-    <!-- /.box-header -->
-    <div class="box-body">
-        @foreach($analytics as $key => $item)
-        <table class="table table-bordered">
-            <tr>
-                <th>Days</th>
-                <th>User Type</th>
-                <th>Sessions</th>
-            </tr>
-            <tr>
-                <td rowspan="2">{{ $key  }}</td>
-                <td>New Visitor</td>
-                <td>{{ $item[0]['visitors'] }}</td>
-            </tr>
-            <tr>
-                <td>Returning Visitor</td>
-                <td>{{ $item[1]['visitors'] }}</td>
-            </tr>
-        </table>
-        @endforeach
-    </div>
-    <!-- /.box-body -->
-</div>
-<!-- /.box -->
+</section>
 @endsection

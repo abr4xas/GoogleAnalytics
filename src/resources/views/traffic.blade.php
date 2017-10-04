@@ -2,6 +2,8 @@
 
 @section('content')
 
+<section class="p-t-lg p-y-md">
+<div class="container">
 
 <div class="box">
     <div class="box-header with-border">
@@ -33,4 +35,6 @@
     <!-- /.box-body -->
 </div>
 <!-- /.box -->
+</div>
+</section>
 @endsection

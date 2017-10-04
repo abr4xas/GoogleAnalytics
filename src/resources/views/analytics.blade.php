@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+<section class="p-t-lg p-y-md">
 <div class="container">
   <div class="row">
     <div class="col-md-12">
@@ -73,13 +74,16 @@
     </div><!-- /.col (RIGHT) -->
   </div><!-- /.row -->
 </div>
+</section>
 @php
 //dd($p_and_v_dates);
 @endphp
 
 @endsection
 
-@section('after_scripts')
+@push('script')
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.1.1/Chart.min.js"></script>
 <script>
   $(function () {
     /* ChartJS
@@ -267,5 +271,5 @@
     barChart.Bar(barChartData, barChartOptions);
   });
 </script>
-@endsection
+@endpush
 
