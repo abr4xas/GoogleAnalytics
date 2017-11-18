@@ -19,6 +19,10 @@
                         <td>New Visitor</td>
                         <td>{{ !empty($item[0]['visitors']) ? $item[0]['visitors'] : 0 }}</td>
                     </tr>
+                    <tr>
+                        <td>Returning Visitor</td>
+                        <td>{{ !empty($item[1]['visitors']) ? $item[1]['visitors'] : 0  }}</td>
+                    </tr>
                 @endforeach
                 </table> 
             </div><!-- /.box-body -->
