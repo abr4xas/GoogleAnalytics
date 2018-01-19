@@ -142,13 +142,13 @@ Add Chart.js to header.
         <li>
             <a href="{{ url('analytics-top-landing-pages') }}">
                 <i class="fa fa-table"></i> 
-                <span>{{ trans('googleanalytics::googleanalyt.toplandingpages') }}</span>
+                <span>{{ trans('googleanalytics::googleanalytics.toplandingpages') }}</span>
             </a>
         </li>
         <li>
             <a href="{{ url('analytics-top-exit-pages') }}">
                 <i class="fa fa-table"></i> 
-                <span>{{ trans('googleanalytics::googleanalyt.topexitpages') }}</span>
+                <span>{{ trans('googleanalytics::googleanalytics.topexitpages') }}</span>
             </a>
         </li>
     </ul>
