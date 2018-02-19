@@ -1,3 +1,5 @@
+<img align="left" width="180" src="https://blog.abr4xas.org/icons/apple-icon-180x180.png">
+
 ## GoogleAnalytics
 
 [![Latest Version on Packagist][ico-version]](https://packagist.org/packages/abr4xas/googleanalytics)
@@ -7,8 +9,9 @@
 [![Quality Score][ico-code-quality]][link-code-quality]
 [![Total Downloads][ico-downloads]](https://github.com/abr4xas/GoogleAnalytics)
 
+This package is for Laravel and shows pageviews and other data from Google Analytics in your admin page. You only need <a href="https://github.com/spatie/laravel-analytics#how-to-obtain-the-credentials-to-communicate-with-google-analytics" target="_blank">setup the credentials to communicate with Google Analytics</a>.
 
-
+---
 
 ### Installation
 
