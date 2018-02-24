@@ -52,19 +52,18 @@ Next up routes:
 
 ```php
 //Google Analytics
-
-Route::get('analytics', 'AnalyticsController@index');
-Route::get('analytics-mobile', 'AnalyticsController@mobile');
-Route::get('analytics-returning', 'AnalyticsController@newreturningsessions');
-Route::get('analytics-operating', 'AnalyticsController@operatingsystem');
-Route::get('analytics-traffic', 'AnalyticsController@traffic');
-Route::get('analytics-time-on-site', 'AnalyticsController@timeonsite');
-Route::get('analytics-referring-sites', 'AnalyticsController@referringsites');
-Route::get('analytics-search-engines', 'AnalyticsController@searchengines');
-Route::get('analytics-keywords', 'AnalyticsController@keywords');
-Route::get('analytics-topcontent', 'AnalyticsController@topcontent');
-Route::get('analytics-top-landing-pages', 'AnalyticsController@toplandingpages');
-Route::get('analytics-top-exit-pages', 'AnalyticsController@topexitpages');
+Route::get('analytics', 'AnalyticsController@index')->name('analytics');
+Route::get('analytics-mobile', 'AnalyticsController@mobile')->name('analytics-mobile');
+Route::get('analytics-returning', 'AnalyticsController@newreturningsessions')->name('analytics-returning');
+Route::get('analytics-operating', 'AnalyticsController@operatingsystem')->name('analytics-operating');
+Route::get('analytics-traffic', 'AnalyticsController@traffic')->name('analytics-traffic');
+Route::get('analytics-time-on-site', 'AnalyticsController@timeonsite')->name('analytics-time-on-site');
+Route::get('analytics-referring-sites', 'AnalyticsController@referringsites')->name('analytics-referring-sites');
+Route::get('analytics-search-engines', 'AnalyticsController@searchengines')->name('analytics-search-engines');
+Route::get('analytics-keywords', 'AnalyticsController@keywords')->name('analytics-keywords');
+Route::get('analytics-topcontent', 'AnalyticsController@topcontent')->name('analytics-topcontent');
+Route::get('analytics-top-landing-pages', 'AnalyticsController@toplandingpages')->name('analytics-top-landing-pages');
+Route::get('analytics-top-exit-pages', 'AnalyticsController@topexitpages')->name('analytics-top-exit-pages');
 ```
 
 Follow the instruction at [spatie/laravel-analytics](https://github.com/spatie/laravel-analytics) and add download a json file and save as a service-account-credentials.json under `storage/app/googleanalytics/` folder.
@@ -83,73 +82,73 @@ Add Chart.js to header.
    </a>
    <ul class="dropdown-menu">
         <li>
-            <a href="{{ url('analytics') }}">
+            <a href="{{ route('analytics') }}">
                 <i class="fa fa-pie-chart"></i> 
                 <span>{{ trans('googleanalytics::googleanalytics.analyticsbasic') }}</span>
             </a>
         </li>
         <li>
-            <a href="{{ url('analytics-mobile') }}">
+            <a href="{{ route('analytics-mobile') }}">
                 <i class="fa fa-table"></i> 
                 <span>{{ trans('googleanalytics::googleanalytics.mobile-traffic') }}</span>
             </a>
         </li>
         <li>
-            <a href="{{ url('analytics-returning') }}">
+            <a href="{{ route('analytics-returning') }}">
                 <i class="fa fa-table"></i> 
                 <span>{{ trans('googleanalytics::googleanalytics.returningsessions') }}</span>
             </a>
         </li>
         <li>
-            <a href="{{ url('analytics-operating') }}">
+            <a href="{{ route('analytics-operating') }}">
                 <i class="fa fa-table"></i> 
                 <span>{{ trans('googleanalytics::googleanalytics.operatingsystem') }}</span>
             </a>
         </li>
         <li>
-            <a href="{{ url('analytics-traffic') }}">
+            <a href="{{ route('analytics-traffic') }}">
                 <i class="fa fa-table"></i> 
                 <span>{{ trans('googleanalytics::googleanalytics.trafficsources') }}</span>
             </a>
         </li>
         <li>
-            <a href="{{ url('analytics-time-on-site') }}">
+            <a href="{{ route('analytics-time-on-site') }}">
                 <i class="fa fa-table"></i> 
                 <span>{{ trans('googleanalytics::googleanalytics.timeonsite') }}</span>
             </a>
         </li>
         <li>
-            <a href="{{ url('analytics-referring-sites') }}">
+            <a href="{{ route('analytics-referring-sites') }}">
                 <i class="fa fa-table"></i> 
                 <span>{{ trans('googleanalytics::googleanalytics.referringsites') }}</span>
             </a>
         </li>
         <li>
-            <a href="{{ url('analytics-search-engines') }}">
+            <a href="{{ route('analytics-search-engines') }}">
                 <i class="fa fa-table"></i> 
                 <span>{{ trans('googleanalytics::googleanalytics.searchengines') }}</span>
             </a>
         </li>
         <li>
-            <a href="{{ url('analytics-keywords') }}">
+            <a href="{{ route('analytics-keywords') }}">
                 <i class="fa fa-table"></i> 
                 <span>{{ trans('googleanalytics::googleanalytics.keywords') }}</span>
             </a>
         </li>
         <li>
-            <a href="{{ url('analytics-topcontent') }}">
+            <a href="{{ route('analytics-topcontent') }}">
                 <i class="fa fa-table"></i> 
                 <span>{{ trans('googleanalytics::googleanalytics.topcontent') }}</span>
             </a>
         </li>
         <li>
-            <a href="{{ url('analytics-top-landing-pages') }}">
+            <a href="{{ route('analytics-top-landing-pages') }}">
                 <i class="fa fa-table"></i> 
                 <span>{{ trans('googleanalytics::googleanalytics.toplandingpages') }}</span>
             </a>
         </li>
         <li>
-            <a href="{{ url('analytics-top-exit-pages') }}">
+            <a href="{{ route('analytics-top-exit-pages') }}">
                 <i class="fa fa-table"></i> 
                 <span>{{ trans('googleanalytics::googleanalytics.topexitpages') }}</span>
             </a>
